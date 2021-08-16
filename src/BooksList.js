@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
@@ -26,11 +26,11 @@ const BooksList = (props) => {
 //shelf Component added
 
   return (
-    <div>
+    <div className="list-books-content">
       {shelfTypes.map((shelf, index) => {
         const bookshelf = books.filter((book) => book.shelf === shelf.type);
         return (
-          <div>
+          <div key={index}>
             <h2 className="bookshelf-title">{shelf.title}</h2>
             
             <Shelfs books={bookshelf} changeShelf={changeShelf} />

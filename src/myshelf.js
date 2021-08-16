@@ -15,7 +15,7 @@ class Shelfs extends Component {
       <div className="bookshelf-books">
         <ol className="books-grid">
           {books.map((book) => (
-            <div className="book">
+            <div className="book" key={book.id}>
               <li key={book.id}>
                 <div className="book-top">
                   <div
@@ -26,7 +26,7 @@ class Shelfs extends Component {
                       backgroundImage: `url(${book.imageLinks.thumbnail})`,
                     }}
                   />
-                  <ChooseShelf Book={book} changeShelf={changeShelf} />
+                  <ChooseShelf books={books} Book={book} changeShelf={changeShelf} />
                 </div>
                 <div className="book-title">{book.title}</div>
                 <div className="book-authors">{book.authors}</div>
