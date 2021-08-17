@@ -15,6 +15,7 @@ class Shelfs extends Component {
       <div className="bookshelf-books">
         <ol className="books-grid">
           {books.map((book) => (
+         
             <div className="book" key={book.id}>
               <li key={book.id}>
                 <div className="book-top">

@@ -103,6 +103,7 @@ class SearchBooks extends Component {
           {newbooks.length>0 && (
             <ol className="books-grid" >
               {newbooks.map(book=> (
+                   (book.imageLinks && book.imageLinks.thumbnail) && (
                 <li key={book.id}>
                   <div className="book-top">
                     <div
@@ -120,7 +121,7 @@ class SearchBooks extends Component {
                   <div className="book-title">{book.title}</div>
                   <div className="book-authors">{book.authors}</div>
                 </li>
-              ))}
+              )))}
             </ol>
           )}
 
